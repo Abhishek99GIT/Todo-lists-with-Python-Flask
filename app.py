@@ -19,10 +19,23 @@ class Todo(db.Model):
 
     def __repr__(self) -> str:
         return f"{self.sno} - {self.title} -{self.desc}"
+    
+def seed_data():
+    with app.app_context():
+        # Check if the database is empty
+        if Todo.query.count() == 0:
+            sample_todos = [
+                Todo(title="Buy groceries", desc="Milk, eggs, bread"),
+                Todo(title="Study Flask", desc="Complete the Render deployment tutorial"),
+                Todo(title="Call a friend", desc="Catch up with Abhinandhan"),
+            ]
+            db.session.bulk_save_objects(sample_todos)
+            db.session.commit()
 
 
 with app.app_context():
     db.create_all()
+    seed_data()
     
 @app.route("/", methods =["POST","GET"])
 def hello_world():
