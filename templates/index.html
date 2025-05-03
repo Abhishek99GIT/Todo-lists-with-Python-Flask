@@ -5,11 +5,11 @@
       <form action="/" method="post">
       <div class="mb-3">
         <label for="title" class="form-label">Todo Title </label>
-        <input type="text" class="form-control" id="title" name="title" >
+        <input type="text" class="form-control" id="title" name="title" required>
       </div>
       <div class="mb-3">
         <label for="desc" class="form-label">Todo Description</label>
-        <input type="text" class="form-control" id="desc" name="desc">
+        <input type="text" class="form-control" id="desc" name="desc" required>
       </div>
       <button type="submit" id="sub_btn" class="btn btn-success">Submit</button>
     </form>
@@ -46,10 +46,12 @@
               <th scope="row">{{loop.index}}</th>
               <td>{{todo.title}}</td>
               <td>{{todo.desc}}</td>
-              <td>{{todo.date_created}}</td>
+              <td>{{todo.date_created.strftime('%Y-%m-%d %H:%M:%S')}}</td>
               <td>
-                <a href="/delete/{{todo.sno}}" type="button" class="btn btn-danger btn-sm mx-2">Delete</button>
-                <a href="/update/{{todo.sno}}" type="button" class="btn btn-primary btn-sm mx-2">Update</button>
+                <a href="/delete/{{todo.sno}}" type="button" class="btn btn-danger btn-sm mx-2">Delete</a>
+              </td>
+              <td>
+                <a href="/update/{{todo.sno}}" type="button" class="btn btn-primary btn-sm mx-2">Update</a>
               </td>
             </tr>  
             

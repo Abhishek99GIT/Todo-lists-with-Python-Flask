@@ -1,4 +1,5 @@
-
+    
+        
         // Load saved theme from localStorage
         const themeToggle = document.getElementById('themeToggle');
         const htmlElement = document.documentElement;

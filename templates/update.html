@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% block title %}Update Todo {{ todo.sno }}{% endblock %}
 {% block body %}
 <div class="container my-4">
     <h2 class="mb-2">Update the {{todo.sno}} Todo</h2>
@@ -12,6 +13,7 @@
       <input type="text" class="form-control" id="desc" name="desc" value="{{todo.desc}}"  >
     </div>
     <button type="submit" class="btn btn-success">Update</button>
+    <a href="{{ url_for('hello_world') }}" class="btn btn-secondary ms-2">Cancel</a>
   </form>
 </div>
 
