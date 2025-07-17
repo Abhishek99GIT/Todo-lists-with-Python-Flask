@@ -74,6 +74,10 @@ def update(sno):
             return redirect("/")
     return render_template("update.html",todo=todo)
 
+@app.route("/ping")
+def ping():
+    return "pong", 200
+
 
 @app.route("/search", methods=["GET"])
 def search():
