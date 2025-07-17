@@ -2,8 +2,8 @@
 
 Welcome to a sleek, no-fuss **To-Do List web app** crafted with **Flask** and **Bootstrap 5**! Built on a cozy Sunday (March 3, 2025), this project was my playground for diving into backend routing, templating, SQLAlchemy, and deploying a Python app on **Render**. It’s simple, functional, and sprinkled with just the right amount of flair.
 
-🔗 **Live Demo**: abhisheks-todo-app.onrender.com\
-📂 **GitHub Repo**: Abhishek99GIT/Todo-lists-with-Python-Flask
+🔗 **Live Demo**: ([Todo-App](https://abhisheks-todo-app.onrender.com/))
+📂 **GitHub Repo**:([GitHub](https://github.com/Abhishek99GIT/Todo-lists-with-Python-Flask))
 
 ---
 
